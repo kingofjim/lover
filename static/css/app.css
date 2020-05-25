@@ -1,0 +1,16 @@
+@font-face {
+  font-family: NotoSansTC;
+  src: url("font/NotoSansTC-Regular.otf") format("opentype");
+}
+body {
+  font-family: "NotoSansTC", serif;
+}
+
+@media all and (min-width: 760px) {
+  body .ftco-section-featured .container .carousel .img-fluid {
+    width: auto;
+    height: 60vw;
+    max-height: 600px;
+    margin: 0 auto;
+  }
+}
