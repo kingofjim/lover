@@ -3,6 +3,9 @@ app/__pycache__/
 LoverDjango/__pycache__/
 LoverDjango/settings.py
 venv/
+venv/*/*/__pycache/*
 static/upload/
 __pycache__/
 */migrations/
+*.pyc
+uwsgi_params
