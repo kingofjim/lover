@@ -13,6 +13,9 @@ section .schedule .media {
   display: block;
   text-align: center;
 }
+#description h3 {
+  font-size: 1.2em;
+}
 
 #arc {
   position: fixed;
