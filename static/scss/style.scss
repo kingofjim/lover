@@ -44,7 +44,8 @@ html {
 
 body {
   font-family: $font-primary;
-  background: $white;
+  //background: $white;
+  background: #f9eee621;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 300;
@@ -1143,7 +1144,7 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  background: #29bae4;
+  background: #262176;
   padding: 12em 0 8em 0;
 
   .ftco-footer-logo {
@@ -1499,8 +1500,16 @@ textarea.form-control {
 }
 
 .ftco-counter {
-  background: $tertiary;
+  //background: $tertiary;
   padding: 15em 0;
+  background-image: url("/static/images/galaxy.jpg");
+  border-radius: 14px;
+
+  .container {
+    background-color: #383838c7;
+    border-radius: 14px;
+    padding-bottom: 31px;
+  }
 
   .icon {
     span {

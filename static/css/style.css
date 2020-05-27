@@ -8546,7 +8546,7 @@ h3 {
 }
 body {
   font-family: "Work Sans", Arial, sans-serif;
-  background: #fff;
+  background: #f9eee621;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 300;
@@ -9462,7 +9462,7 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  background: #29bae4;
+  background: #262176;
   padding: 12em 0 8em 0;
 }
 .ftco-footer .ftco-footer-logo {
@@ -9762,8 +9762,14 @@ textarea.form-control {
 }
 
 .ftco-counter {
-  background: #ee76ad;
   padding: 15em 0;
+  background-image: url("/static/images/galaxy.jpg");
+  border-radius: 14px;
+}
+.ftco-counter .container {
+  background-color: #383838c7;
+  border-radius: 14px;
+  padding-bottom: 31px;
 }
 .ftco-counter .text strong.number {
   font-weight: 400;
