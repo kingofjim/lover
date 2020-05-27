@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5,
     position: relative;
 
     @media all and (max-width: 900px) {
-      height: calc(100vh - 117px);
+      height: calc(104vh - 116px);
       min-height: 700px;
       position: relative;
     }
@@ -395,6 +395,7 @@ h1, h2, h3, h4, h5,
 
       @media all and (max-width: 900px) {
         background-image: url("/static/images/mobile.png");
+        background-size: cover;
       }
     }
 
