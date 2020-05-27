@@ -1502,9 +1502,18 @@ textarea.form-control {
 .ftco-counter {
   //background: $tertiary;
   padding: 15em 0;
-  background-image: url("/static/images/galaxy.jpg");
+  //background-image: url("/static/images/galaxy.jpg");
   border-radius: 14px;
 
+  &::before {
+  content: "";
+    width: 25vw;
+    height: 2px;
+    border: 2px solid #ff67de;
+    position: absolute;
+    right: 37vw;
+    top: 0;
+  }
   .container {
     background-color: #383838c7;
     border-radius: 14px;
