@@ -6,6 +6,5 @@ venv/
 venv/*/*/__pycache/*
 static/upload/
 __pycache__/
-*/migrations/
 *.pyc
 uwsgi_params
