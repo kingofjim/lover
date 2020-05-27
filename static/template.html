@@ -33,19 +33,19 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.html">尋找愛神代言人</a>
+        <a class="navbar-brand" href="/">尋找愛神代言人</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+            <span class="oi oi-menu"></span> 選單
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <!--            <li class="nav-item active"><a href="index.html" class="nav-link">首頁</a></li>-->
-                <li class="nav-item"><a href="#" class="nav-link">活動主旨</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">活動辦法</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">活動獎項</a></li>
-                <li class="nav-item"><a href="{% url 'apply' %}" class="nav-link">我要報名</a></li>
+                <li class="nav-item"><a href="/#schedule" class="nav-link">活動流程</a></li>
+                <li class="nav-item"><a href="/#section-counter" class="nav-link">活動獎項</a></li>
+                <li class="nav-item"><a href="/#description" class="nav-link">活動辦法</a></li>
+                <li class="nav-item"><a href="{% url 'apply' %}#form" class="nav-link">我要報名</a></li>
                 <!--            <li class="nav-item dropdown">-->
                 <!--              <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>-->
                 <!--                <div class="dropdown-menu" aria-labelledby="dropdown04">-->
@@ -93,60 +93,65 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Company</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
+                    <h2 class="ftco-heading-2">快速連結</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="/#schedule" class="py-2 d-block">活動流程</a></li>
+                <li><a href="/#section-counter" class="py-2 d-block">活動獎項</a></li>
+                <li><a href="/#description" class="py-2 d-block">活動辦法</a></li>
+                <li><a href="{% url 'apply' %}#form" class="py-2 d-block">我要報名</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">主辦單位</h2>
+                    <p>台北市士林夜市觀光發展協會</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a class="icon-line"><span></span></a></li>
+                        <li class="ftco-animate"><a><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a><span class="icon-youtube"></span></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Quick Links</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Home</a></li>
-                        <li><a href="#" class="py-2 d-block">About</a></li>
-                        <li><a href="#" class="py-2 d-block">Services</a></li>
-                        <li><a href="#" class="py-2 d-block">Portfolio</a></li>
-                        <li><a href="#" class="py-2 d-block">Contact</a></li>
-                        <li><a href="#" class="py-2 d-block">Privacy</a></li>
-                    </ul>
+                    <h2 class="ftco-heading-2">協辦單位</h2>
+                    <p>華訊電子商務股份有限公司</p>
+                    <p>中華多媒體直播演藝協會</p>
+                    <p>紅通通文創娛樂</p>
                 </div>
             </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Contact Information</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">198 West 21th Street, Suite 721 New York NY 10016</a></li>
-                        <li><a href="#" class="py-2 d-block">+ 1235 2355 98</a></li>
-                        <li><a href="#" class="py-2 d-block">info@yoursite.com</a></li>
-                        <li><a href="#" class="py-2 d-block">email@email.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Newsletter</h2>
-                    <p>Far far away, behind the word mountains, far from the countries.</p>
-                    <form action="#" class="subscribe-form">
-                        <div class="form-group">
-                            <span class="icon icon-paper-plane"></span>
-                            <input type="text" class="form-control" placeholder="Subscribe">
-                        </div>
-                    </form>
-                </div>
-            </div>
+{#            <div class="col-md">#}
+{#                <div class="ftco-footer-widget mb-4">#}
+{#                    <h2 class="ftco-heading-2">Contact Information</h2>#}
+{#                    <ul class="list-unstyled">#}
+{#                        <li><a href="#" class="py-2 d-block">198 West 21th Street, Suite 721 New York NY 10016</a></li>#}
+{#                        <li><a href="#" class="py-2 d-block">+ 1235 2355 98</a></li>#}
+{#                        <li><a href="#" class="py-2 d-block">info@yoursite.com</a></li>#}
+{#                        <li><a href="#" class="py-2 d-block">email@email.com</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-md">#}
+{#                <div class="ftco-footer-widget mb-4">#}
+{#                    <h2 class="ftco-heading-2">Newsletter</h2>#}
+{#                    <p>Far far away, behind the word mountains, far from the countries.</p>#}
+{#                    <form action="#" class="subscribe-form">#}
+{#                        <div class="form-group">#}
+{#                            <span class="icon icon-paper-plane"></span>#}
+{#                            <input type="text" class="form-control" placeholder="Subscribe">#}
+{#                        </div>#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
 
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a
-                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                    台北市士林夜市觀光發展協會 &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
@@ -161,6 +166,7 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
                 stroke="#F96D00"/>
     </svg>
+    <span class="completed">報名完成</span>
 </div>
 
 

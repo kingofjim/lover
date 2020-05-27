@@ -137,20 +137,24 @@
 			} 
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+					navbar.addClass('awake');
+					$('.ftco-navbar-light .navbar-nav > .nav-item > .nav-link').css('text-shadow', 'none');
 				}
 				
 				if(sd.length > 0) {
 					sd.addClass('sleep');
+					$('.ftco-navbar-light .navbar-nav > .nav-item > .nav-link').css('text-shadow', '2px 2px #000000	');
 				}
 			}
 			if ( st < 350 ) {
 				if ( navbar.hasClass('awake') ) {
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
+					$('.ftco-navbar-light .navbar-nav > .nav-item > .nav-link').css('text-shadow', '2px 2px #000000	');
 				}
 				if(sd.length > 0) {
 					sd.removeClass('sleep');
+					$('.ftco-navbar-light .navbar-nav > .nav-item > .nav-link').css('text-shadow', 'none');
 				}
 			}
 		});
@@ -449,8 +453,10 @@
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
-	
 
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
 
 
 })(jQuery);

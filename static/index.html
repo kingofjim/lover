@@ -1,316 +1,401 @@
 {% extends 'template.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
 {% block content %}
 
-    <section class="ftco-section-featured ftco-animate">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="carousel owl-carousel">
-              <div class="item">
-                <a href="portfolio.html">
-                  <img src="static/images/home-girl-1.jpg" class="img-fluid" alt="">
-                  <h3 align="center">林采緹</h3>
-                </a>
-              </div>
-              <div class="item">
-                <a href="portfolio.html">
-                  <img src="static/images/home-girl-2.jpg" class="img-fluid" alt="">
-                  <h3 align="center">林采緹</h3>
-                </a>
-              </div>
-              <div class="item">
-                <a href="portfolio.html">
-                  <img src="static/images/home-girl-3.jpg" class="img-fluid" alt="">
-                  <h3 align="center">林采緹</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+    {#    <section class="ftco-section-featured ftco-animate">#}
+    {#      <div class="container">#}
+    {#        <div class="row">#}
+    {#          <div class="col-md-12">#}
+    {#            <div class="carousel owl-carousel">#}
+    {#              <div class="item">#}
+    {#                <a href="portfolio.html">#}
+    {#                  <img src="static/images/home-girl-1.jpg" class="img-fluid" alt="">#}
+    {#                  <h3 align="center">林采緹</h3>#}
+    {#                </a>#}
+    {#              </div>#}
+    {#              <div class="item">#}
+    {#                <a href="portfolio.html">#}
+    {#                  <img src="static/images/home-girl-2.jpg" class="img-fluid" alt="">#}
+    {#                  <h3 align="center">林采緹</h3>#}
+    {#                </a>#}
+    {#              </div>#}
+    {#              <div class="item">#}
+    {#                <a href="portfolio.html">#}
+    {#                  <img src="static/images/home-girl-3.jpg" class="img-fluid" alt="">#}
+    {#                  <h3 align="center">林采緹</h3>#}
+    {#                </a>#}
+    {#              </div>#}
+    {#            </div>#}
+    {#          </div>#}
+    {#        </div>#}
+    {#      </div>#}
+    {#    </section>#}
 
-    <section class="ftco-section ftco-degree-bg">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Our Services</span>
-            <h2>活動流程</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center icon-layers"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">參加海選 (6/1 ~ 6/30)</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center icon-gears"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Multiple Functions</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="align-self-center icon-paper-plane"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Advanced Visualizations</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-live_help"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Community &amp; Supports</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section-parallax ftco-degree-bg">
-      <div class="parallax-img d-flex align-items-center">
+    <section class="ftco-section ftco-degree-bg" id="schedule">
         <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-              <h2 class="h1 font-weight-bold">Turn every channel into a revenue channel and drive business growth</h2>
-              <p><a href="#" class="btn btn-primary btn-outline-white mt-3 py-3 px-4">View more details</a></p>
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <span class="subheading">Schedule</span>
+                    <h2>活動流程</h2>
+                </div>
             </div>
-          </div>
+            <div class="row">
+                <div class="schedule col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon color-1 d-flex justify-content-center mb-3"><span
+                                    class="align-self-center icon-people"></span></div>
+                        </div>
+                        <div class="media-body p-2">
+                            <h3 class="heading">參加海選<br>(6/1 ~ 6/30)</h3>
+                            <p>入取88名參賽者，入圍者即可獲得1680愛神獎金及愛神佛牌一只，並於士林夜市愛神像前拍攝60秒短片用於網路投票。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon color-2 d-flex justify-content-center mb-3"><span
+                                    class="align-self-center icon-exposure_plus_2"></span></div>
+                        </div>
+                        <div class="media-body p-2">
+                            <h3 class="heading">網路投票<br>(7/1 ~ 7/31)</h3>
+                            <p>登入臉書帳號，一天可以投兩票，錄取前八名票數最高者。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon color-3 d-flex justify-content-center mb-3"><span
+                                    class="align-self-center icon-camera_roll"></span></div>
+                        </div>
+                        <div class="media-body p-2">
+                            <h3 class="heading">八強資格淘汰賽<br>(8/14)</h3>
+                            <p>8名參賽者錄取4名，與某某藝人一起參加XXX網路節目</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon color-4 d-flex justify-content-center mb-3"><span
+                                    class="align-self-center icon-star2"></span></div>
+                        </div>
+                        <div class="media-body p-2">
+                            <h3 class="heading">四強總決賽<br>(8/25)</h3>
+                            <p>最終決賽，在ＸＸ網路節目中票選出總冠軍。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="ftco-section">
-      <div class="container-fluid">
-        <div class="row no-gutters justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Works</span>
-            <h2>Recent Works</h2>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="block-3 d-md-flex ftco-animate">
-            <a href="portfolio.html" class="image" style="background-image: url('static/images/work-1.jpg'); "></a>
-            <div class="text">
-              <h4 class="subheading">Illustration</h4>
-              <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate">
-            <a href="portfolio.html" class="image order-2" style="background-image: url('static/images/work-2.jpg'); "></a>
-            <div class="text order-1">
-              <h4 class="subheading">Application</h4>
-              <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-          </div>
-          <div class="block-3 d-md-flex ftco-animate">
-            <a href="portfolio.html" class="image" style="background-image: url('static/images/work-3.jpg'); "></a>
-            <div class="text">
-              <h4 class="subheading">Web Design</h4>
-              <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section testimony-section ftco-degree-bg">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Customer Says</span>
-            <h2>Our satisfied customer says</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url('static/images/person_1.jpg')">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url('static/images/person_2.jpg')">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Interface Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url('static/images/person_3.jpg')">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">UI Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url('static/images/person_1.jpg')">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">Web Developer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url('static/images/person_1.jpg')">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Dennis Green</p>
-                    <span class="position">System Analytics</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
     <section class="ftco-section ftco-counter ftco-degree-bg" id="section-counter">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2>活動獎項</h2>
-          </div>
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <span class="subheading">Prizes</span>
+                    <h2>活動獎項</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                        <div class="text">
+                            <span>第一名</span>
+                            <strong class="number" data-number="100000">0</strong><span class="dollar">元</span>
+                            <span>女神獎盃</span>
+                            <span>士林夜市觀光大使一年</span>
+                            <span>拍攝形象照製作代言人文宣</span>
+                            <span>與知名藝人拍攝多支網路節目</span>
+                            <span>拍攝商案（將另外給予費用）</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                        <div class="text">
+                            <span>第二名</span>
+                            <strong class="number" data-number="50000">0</strong><span class="dollar">元</span>
+                            <span>女神獎杯</span>
+                            <span>與知名藝人拍攝網路節目</span>
+                            <span>拍攝商案（將另外給予費用）</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 text-center">
+                        <div class="text">
+                            <span>第三名</span>
+                            <strong class="number" data-number="30000">0</strong><span class="dollar">元</span>
+                            <span>女神獎杯</span>
+                            <span>與知名藝人拍攝網路節目</span>
+                            <span>拍攝商案（將另外給予費用）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <span>第一名</span>
-                <strong class="number" data-number="100000">0</strong><span>元</span>
-                <span>Customers are satisfied with our professional support</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <span>第二名</span>
-                <strong class="number" data-number="50000">0</strong>
-                <span>元</span>
-                <span>Amazing preset options to be mixed and combined</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <span>第三名</span>
-                <strong class="number" data-number="30000">0</strong>
-                <span>元</span>
-                <span>Average response time on live chat support channel</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="ftco-section ftco-degree-bg">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Blog</span>
-            <h2>Recent Blog</h2>
-          </div>
+    <section class="ftco-section ftco-degree-bg" id="description">
+        <div class="container">
+            <div class="heading-section">
+                <span class="subheading">Description</span>
+                <h2 align="center">活動辦法</h2>
+            </div>
+            <h3>[ 活動主旨 ]</h3>
+            <p>藉由泰國愛神安座士林夜市推廣地區觀光，並希望所有夢想成為網紅的人能透過本活動被更多人看見！</p>
+            <h3>[報名資格]</h3>
+            <p>16歲-25歲女性，對成為網路節目主角有興趣者，皆可報名！</p>
+
+            <h3>[ 活動時程 ]</h3>
+            <p>
+            報名參加海選：6月1日～6月30日<br>
+            通知入選者88名：6月1日～6月30日（獲得愛神＋像神佛牌＋1680元通告費，於士林夜市愛神像前拍攝照片與60秒影片用於網路投票）<br>
+            網路投票選出8強：7月1日～7月31日<br>
+            八強資格淘汰賽：8月14日(拍攝網路節目 8選出4強)<br>
+            四強總決賽：8月25日(拍攝網路節目 4選出3強)
+            </p>
+
+            <h3>[ 活動獎項 ]</h3>
+
+            <p>
+            第一名獲得新台幣10萬元，女神獎盃及彩帶，擔任士林夜市觀光大使一年，拍攝形象照，並設立代言人人形立牌與製作代言人圖片文宣，並與知名藝人拍攝多支網路節目，並不定時拍攝商案。（將另外給予費用）<br>
+            第二名獲得新台幣5萬元，女神獎盃及彩帶，與知名藝人拍攝網路節目。（將另外給予費用）<br>
+            第三名獲得新台幣3萬元，女神獎盃及彩帶，與知名藝人拍攝網路節目。（將另外給予費用）<br>
+            </p>
+
+            <h3>[ 如何參加 ]</h3>
+            <p>點選：我要報名<br>
+            按照流程填寫個人資料<br>
+            上傳一張個人全身、半身照片<br>
+            完成報名後，工作人員將會通知
+            </p>
+            <h3>[ 注意事項 ]</h3>
+            <p>主辦單位保留擴大、修改、取消、終止此活動以及更改活動日期的權力。</p>
+
         </div>
-        <div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('static/images/image_1.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-                <div class="meta mb-3">
-                  <div><a href="#">July 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.html" class="block-20" style="background-image: url('static/images/image_2.jpg');">
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-3">
-                  <div><a href="#">July 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.html" class="block-20" style="background-image: url('static/images/image_3.jpg');">
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-3">
-                  <div><a href="#">July 12, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
+
+{#    <section class="ftco-section-parallax ftco-degree-bg">#}
+{#        <div class="parallax-img d-flex align-items-center">#}
+{#            <div class="container">#}
+{#                <div class="row d-flex justify-content-center">#}
+{#                    <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">#}
+{#                        <h2 class="h1 font-weight-bold">你就是我們要找的愛神代言人！</h2>#}
+{#                        <p><a href="/apply/" class="btn btn-primary btn-outline-white mt-3 py-3 px-4 apply">立即報名</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+
+{#    <section class="ftco-section">#}
+{#        <div class="container-fluid">#}
+{#            <div class="row no-gutters justify-content-center mb-5 pb-5">#}
+{#                <div class="col-md-7 text-center heading-section ftco-animate">#}
+{#                    <span class="subheading">Works</span>#}
+{#                    <h2>Recent Works</h2>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row no-gutters">#}
+{#                <div class="block-3 d-md-flex ftco-animate">#}
+{#                    <a href="portfolio.html" class="image"#}
+{#                       style="background-image: url('/static/images/work-1.jpg'); "></a>#}
+{#                    <div class="text">#}
+{#                        <h4 class="subheading">Illustration</h4>#}
+{#                        <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a>#}
+{#                        </h2>#}
+{#                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost#}
+{#                            unorthographic life One day however a small line of blind text by the name of Lorem Ipsum#}
+{#                            decided to leave for the far World of Grammar.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="block-3 d-md-flex ftco-animate">#}
+{#                    <a href="portfolio.html" class="image order-2"#}
+{#                       style="background-image: url('/static/images/work-2.jpg'); "></a>#}
+{#                    <div class="text order-1">#}
+{#                        <h4 class="subheading">Application</h4>#}
+{#                        <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a>#}
+{#                        </h2>#}
+{#                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost#}
+{#                            unorthographic life One day however a small line of blind text by the name of Lorem Ipsum#}
+{#                            decided to leave for the far World of Grammar.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="block-3 d-md-flex ftco-animate">#}
+{#                    <a href="portfolio.html" class="image"#}
+{#                       style="background-image: url('/static/images/work-3.jpg'); "></a>#}
+{#                    <div class="text">#}
+{#                        <h4 class="subheading">Web Design</h4>#}
+{#                        <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a>#}
+{#                        </h2>#}
+{#                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost#}
+{#                            unorthographic life One day however a small line of blind text by the name of Lorem Ipsum#}
+{#                            decided to leave for the far World of Grammar.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <section class="ftco-section testimony-section ftco-degree-bg">#}
+{#        <div class="container">#}
+{#            <div class="row justify-content-center mb-5 pb-5">#}
+{#                <div class="col-md-7 text-center heading-section ftco-animate">#}
+{#                    <span class="subheading">Customer Says</span>#}
+{#                    <h2>Our satisfied customer says</h2>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row ftco-animate">#}
+{#                <div class="col-md-12">#}
+{#                    <div class="carousel-testimony owl-carousel ftco-owl">#}
+{#                        <div class="item text-center">#}
+{#                            <div class="testimony-wrap p-4 pb-5">#}
+{#                                <div class="user-img mb-4" style="background-image: url('/static/images/person_1.jpg')">#}
+{#                    <span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                                </div>#}
+{#                                <div class="text">#}
+{#                                    <p class="mb-5">Far far away, behind the word mountains, far from the countries#}
+{#                                        Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                                    <p class="name">Dennis Green</p>#}
+{#                                    <span class="position">Marketing Manager</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="item text-center">#}
+{#                            <div class="testimony-wrap p-4 pb-5">#}
+{#                                <div class="user-img mb-4" style="background-image: url('/static/images/person_2.jpg')">#}
+{#                    <span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                                </div>#}
+{#                                <div class="text">#}
+{#                                    <p class="mb-5">Far far away, behind the word mountains, far from the countries#}
+{#                                        Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                                    <p class="name">Dennis Green</p>#}
+{#                                    <span class="position">Interface Designer</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="item text-center">#}
+{#                            <div class="testimony-wrap p-4 pb-5">#}
+{#                                <div class="user-img mb-4" style="background-image: url('/static/images/person_3.jpg')">#}
+{#                    <span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                                </div>#}
+{#                                <div class="text">#}
+{#                                    <p class="mb-5">Far far away, behind the word mountains, far from the countries#}
+{#                                        Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                                    <p class="name">Dennis Green</p>#}
+{#                                    <span class="position">UI Designer</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="item text-center">#}
+{#                            <div class="testimony-wrap p-4 pb-5">#}
+{#                                <div class="user-img mb-4" style="background-image: url('/static/images/person_1.jpg')">#}
+{#                    <span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                                </div>#}
+{#                                <div class="text">#}
+{#                                    <p class="mb-5">Far far away, behind the word mountains, far from the countries#}
+{#                                        Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                                    <p class="name">Dennis Green</p>#}
+{#                                    <span class="position">Web Developer</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="item text-center">#}
+{#                            <div class="testimony-wrap p-4 pb-5">#}
+{#                                <div class="user-img mb-4" style="background-image: url('/static/images/person_1.jpg')">#}
+{#                    <span class="quote d-flex align-items-center justify-content-center">#}
+{#                      <i class="icon-quote-left"></i>#}
+{#                    </span>#}
+{#                                </div>#}
+{#                                <div class="text">#}
+{#                                    <p class="mb-5">Far far away, behind the word mountains, far from the countries#}
+{#                                        Vokalia and Consonantia, there live the blind texts.</p>#}
+{#                                    <p class="name">Dennis Green</p>#}
+{#                                    <span class="position">System Analytics</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{##}
+{#    <section class="ftco-section ftco-degree-bg">#}
+{#        <div class="container">#}
+{#            <div class="row justify-content-center mb-5 pb-5">#}
+{#                <div class="col-md-7 text-center heading-section ftco-animate">#}
+{#                    <span class="subheading">Blog</span>#}
+{#                    <h2>Recent Blog</h2>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-md-4 ftco-animate">#}
+{#                    <div class="blog-entry">#}
+{#                        <a href="blog-single.html" class="block-20"#}
+{#                           style="background-image: url('/static/images/image_1.jpg');">#}
+{#                        </a>#}
+{#                        <div class="text p-4 d-block">#}
+{#                            <div class="meta mb-3">#}
+{#                                <div><a href="#">July 12, 2018</a></div>#}
+{#                                <div><a href="#">Admin</a></div>#}
+{#                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+{#                            </div>#}
+{#                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the#}
+{#                                blind texts</a></h3>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 ftco-animate">#}
+{#                    <div class="blog-entry" data-aos-delay="100">#}
+{#                        <a href="blog-single.html" class="block-20"#}
+{#                           style="background-image: url('/static/images/image_2.jpg');">#}
+{#                        </a>#}
+{#                        <div class="text p-4">#}
+{#                            <div class="meta mb-3">#}
+{#                                <div><a href="#">July 12, 2018</a></div>#}
+{#                                <div><a href="#">Admin</a></div>#}
+{#                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+{#                            </div>#}
+{#                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the#}
+{#                                blind texts</a></h3>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 ftco-animate">#}
+{#                    <div class="blog-entry" data-aos-delay="200">#}
+{#                        <a href="blog-single.html" class="block-20"#}
+{#                           style="background-image: url('/static/images/image_3.jpg');">#}
+{#                        </a>#}
+{#                        <div class="text p-4">#}
+{#                            <div class="meta mb-3">#}
+{#                                <div><a href="#">July 12, 2018</a></div>#}
+{#                                <div><a href="#">Admin</a></div>#}
+{#                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+{#                            </div>#}
+{#                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the#}
+{#                                blind texts</a></h3>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <a href="/apply/#form"><img src="/static/images/cupid.svg" id="arc" data-toggle="tooltip" data-placement="top" title="立即報名"></a>
 {% endblock %}

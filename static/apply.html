@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-    <section class="ftco-section contact-section ftco-degree-bg ftco-animate">
+    <section class="ftco-section contact-section ftco-degree-bg ftco-animate" id="form">
         <div class="container bg-light">
             <div class="row d-flex mb-5 contact-info">
                 <div class="col-md-12 mb-4">
@@ -18,9 +18,9 @@
                     <p><span>報名期限: </span>2020/06/01 ~ 2020/06/30</p>
                 </div>
             </div>
-            <form action="#">
+            <form>
+                {% csrf_token %}
                 <div class="row block-9">
-
                     <div class="col-md-6 pr-md-5">
                         <span>個人資料</span>
                         <div class="form-group">
@@ -43,34 +43,35 @@
                     <div class="col-md-6 pr-md-5">
                         <span>以下聯絡資訊僅供通過初審後聯繫用，將不用於其他用途</span>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Line ID" name="line">
+                            <input type="text" class="form-control" placeholder="Line ID" name="line" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="電子郵件" name="email">
+                            <input type="email" class="form-control" placeholder="電子郵件" name="email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="聯絡電話 " name="phone">
+                            <input type="tel" class="form-control" placeholder="聯絡電話 " name="phone" required>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <h6 align="center">上傳照片（全身、半身）</h6>
+                        <h6 align="center"><small>照片大小6MB以內，若入圍將展示在個人頁面上</small></h6>
                     </div>
-                    <div class="col-xl-6 pr-md-5">
+                    <div class="col-xl-6">
                         <div class="photo-box">
                             <div class="form-group">
-                                <button type="button" data-name="whole-photo" class="btn btn-primary py-3 px-5">全身照片<span class="icon-file_upload"></span></button>
+                                <button type="button" data-name="photo-whole" class="btn btn-primary py-3 px-5">全身照片<span class="icon-file_upload"></span></button>
                                 <a class="close"></a>
                             </div>
-                            <input type="file" id="whole-photo" name="whole-photo" accept="image/jpeg,image/png" required>
+                            <input type="file" id="photo-whole" name="photo-whole" accept="image/jpeg,image/png">
                         </div>
                     </div>
-                    <div class="col-xl-6 pr-md-5">
+                    <div class="col-xl-6">
                         <div class="photo-box">
                             <div class="form-group">
-                                <button type="button" data-name="half-photo" class="btn btn-primary py-3 px-5">半身照片<span class="icon-file_upload"></span></button>
+                                <button type="button" data-name="photo-half" class="btn btn-primary py-3 px-5">半身照片<span class="icon-file_upload"></span></button>
                                 <a class="close"></a>
                             </div>
-                            <input type="file" id="half-photo" name="half-photo" accept="image/jpeg,image/png" required>
+                            <input type="file" id="photo-half" name="photo-half" accept="image/jpeg,image/png">
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -80,6 +81,7 @@
                     </div>
                 </div>
             </form>
+            <h6 id="warning">注意事項: 主辦單位保留擴大、修改、取消、終止此活動以及更改活動日期的權力。</h6>
         </div>
     </section>
 {% endblock %}

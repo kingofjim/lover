@@ -1,5 +1,8 @@
 .idea/
-__pycache__/*
-App/__pycache__/
-
+app/__pycache__/
 LoverDjango/__pycache__/
+LoverDjango/settings.py
+venv/
+static/upload/
+__pycache__/
+*/migrations/

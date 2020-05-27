@@ -36,6 +36,38 @@ $(function () {
         }
     });
 
+    $('main section form input[type=submit]').click(function (e) {
+        if ($('main section form')[0].checkValidity()) {
+            e.preventDefault();
+
+            // check photo value
+            if ($('main section .photo-box input').filter(function (i, e) {
+                return e.files.length == 0
+            }).length != 0) {
+                alert('請上傳 全身/半身照片')
+            } else {
+                let formdata = new FormData($('main section form')[0]);
+                $.ajax({
+                    method: 'POST',
+                    'contentType': false,
+                    'processData': false,
+                    'mimeType': 'multipart/form-data',
+                    data: formdata,
+                    beforeSend: function() {
+                        loaderToggle();
+                    },
+                    success: function () {
+                        $('main section form input:not([type=submit])').val('');
+                        $('main section .photo-box .close').click();
+                    },
+                    complete: function() {
+                        loaderToggle();
+                    }
+                })
+            }
+        }
+    });
+
     function readURL(input) {
         if (input.files && input.files[0]) {
             if (input.files[0].size < 6000000) {
@@ -52,4 +84,25 @@ $(function () {
             }
         }
     }
+
+
+
 });
+function loaderToggle() {
+        if($('#ftco-loader').hasClass('show')) {
+            $('#ftco-loader .completed').show();
+            setTimeout( function(){
+                $('body').css('overflow', 'visible');
+                $('#ftco-loader').toggleClass('show');
+            }, 1000);
+            setTimeout( function(){
+                $('#ftco-loader .completed').hide();
+            }, 1200);
+
+        } else {
+            $('#ftco-loader').toggleClass('show');
+            $('#ftco-loader.fullscreen').css('background-color', 'rgba(255, 255, 255, 0.5)');
+            $('#ftco-loader.fullscreen').css('z-index', 0);
+            $('body').css('overflow', 'hidden');
+        }
+    }
