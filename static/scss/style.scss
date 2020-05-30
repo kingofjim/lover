@@ -6,7 +6,7 @@ $font-primary: 'Work Sans', Arial, sans-serif;
 $white: #fff;
 $black: #404044;
 
-$primary: #78d5ef;
+$primary: #fcaf45;
 $secondary: #79efb4;
 $tertiary: #ee76ad;
 $quarternary: #efac78;
@@ -58,7 +58,7 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: $primary;
+    color: #fcaf45;
   }
 }
 
@@ -370,12 +370,36 @@ h1, h2, h3, h4, h5,
   position: relative;
 
   .slider-item {
-    height: calc(69vw - 132px);
+    height: calc(64vw - 129px);
     min-height: 500px;
     position: relative;
+    padding-top: 5vw;
 
-    @media all and (max-width: 900px) {
-      height: calc(104vh - 116px);
+    @media all and (max-width: 992px) {
+      & {
+        padding-top: 0;
+        height: 65vw;
+      }
+      .col-md-10 {
+        flex: auto;
+        max-width: inherit;
+      }
+    }
+
+    .container-fluid {
+      .row {
+        margin: 0;
+      }
+
+      @media all and (max-width: 720px) {
+        img {
+          display: none;
+        }
+      }
+    }
+
+    @media all and (max-width: 720px) {
+      height: calc(200vw);
       min-height: 700px;
       position: relative;
     }
@@ -388,21 +412,21 @@ h1, h2, h3, h4, h5,
       bottom: 0;
       content: '';
       opacity: .99;
-      background-image: url("/static/images/computer.png");
-      background-size: contain;
+      background-image: url("/static/images/banner_bg.png");
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: top;
       //@include gradient-background();
 
-      @media all and (max-width: 900px) {
-        background-image: url("/static/images/mobile.png");
+      @media all and (max-width: 720px) {
+        background-image: url("/static/images/banner_mobile.png");
         background-size: cover;
+        height: calc(200vw);
       }
     }
 
     .slider-text {
       color: $white;
-      height: calc(100vh - 117px);
       min-height: 500px;
 
       h1 {
@@ -1144,7 +1168,7 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  background: #390099;
+  background: #4c0421;
   padding: 12em 0 8em 0;
 
   .ftco-footer-logo {
@@ -1506,18 +1530,20 @@ textarea.form-control {
   border-radius: 14px;
 
   &::before {
-  content: "";
+    content: "";
     width: 25vw;
     height: 2px;
-    border: 2px solid #ff67de;
+    border: 2px solid #fcaf45;
     position: absolute;
     right: 37vw;
     top: 0;
   }
+
   .container {
-    background-color: #383838c7;
+    background-color: #541111;
     border-radius: 14px;
     padding-bottom: 31px;
+    max-width: 1400px;
   }
 
   .icon {

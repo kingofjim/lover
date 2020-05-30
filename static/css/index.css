@@ -5,6 +5,10 @@ section .schedule .media {
   width: 100%;
 }
 
+#lover p {
+  padding: 0 25px;
+}
+
 a.apply {
   position: fixed;
   width: 16vw;
@@ -16,6 +20,14 @@ a.apply {
 
 #section-counter .dollar {
   display: inline-block;
+}
+#section-counter h3 {
+  color: #fdaf45;
+}
+@media all and (max-width: 992px) {
+  #section-counter .text {
+    margin-bottom: 3em;
+  }
 }
 
 #description .subheading {
@@ -29,7 +41,7 @@ a.apply {
   content: "";
   width: 25vw;
   height: 2px;
-  border: 2px solid #ff67de;
+  border: 2px solid #fcaf45;
   position: absolute;
   right: 37vw;
   top: 0;
@@ -65,7 +77,7 @@ a.apply {
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: #0505A9;
+  color: #fcaf45;
   font-size: 16px;
   font-weight: bold;
   background-color: transparent;
@@ -83,7 +95,7 @@ a.apply {
   top: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #0505A9;
+  border: 2px solid #fcaf45;
   border-radius: 12px;
 }
 .blob-btn:after {
@@ -129,7 +141,7 @@ a.apply {
   top: 2px;
   width: 25%;
   height: 100%;
-  background: #0505A9;
+  background: #fcaf45;
   border-radius: 100%;
   transform: translate3d(0, 150%, 0) scale(1.7);
   transition: transform 0.45s;

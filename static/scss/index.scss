@@ -12,6 +12,12 @@ section {
   }
 }
 
+#lover {
+  p {
+    padding: 0 25px;
+  }
+}
+
 a.apply {
   position: fixed;
   width: 16vw;
@@ -25,6 +31,17 @@ a.apply {
   .dollar {
     display: inline-block;
   }
+
+  h3 {
+    color: #fdaf45;
+  }
+
+  @media all and (max-width: 992px) {
+    .text {
+      margin-bottom: 3em;
+    }
+  }
+
 }
 
 #description {
@@ -41,7 +58,7 @@ a.apply {
     content: "";
     width: 25vw;
     height: 2px;
-    border: 2px solid #ff67de;
+    border: 2px solid #fcaf45;
     position: absolute;
     right: 37vw;
     top: 0;
@@ -73,7 +90,7 @@ a.apply {
   border-radius: 30px;
 }
 
-$cyan: #0505A9;
+$cyan: #fcaf45;
 $dark: #FFFFFF;
 $borderW: 2px;
 
