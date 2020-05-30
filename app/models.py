@@ -14,3 +14,6 @@ class Players(models.Model):
     photo_whole = models.CharField(max_length=150, null=True)
     photo_half = models.CharField(max_length=150, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
