@@ -59,6 +59,7 @@ $(function () {
                     success: function () {
                         $('main section form input:not([type=submit])').val('');
                         $('main section .photo-box .close').click();
+                        $('#form form input').val('');
                     },
                     complete: function() {
                         loaderToggle();
