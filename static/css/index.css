@@ -5,8 +5,10 @@ section .schedule .media {
   width: 100%;
 }
 
-#lover h2 {
-  font-size: 6vw;
+@media all and (max-width: 720px) {
+  #lover h2 {
+    font-size: 5vw;
+  }
 }
 #lover p {
   padding: 0 25px;
