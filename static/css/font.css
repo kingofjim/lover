@@ -1,4 +1,6 @@
 @font-face {
+  font-display: optional;
   font-family: NotoSansTC;
+  font-display: auto;
   src: url("/static/css/font/NotoSansTC-Regular.otf") format("opentype");
 }
