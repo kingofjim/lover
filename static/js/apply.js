@@ -59,11 +59,19 @@ $(function () {
                     success: function () {
                         $('main section form input:not([type=submit])').val('');
                         $('main section .photo-box .close').click();
-                        $('#form form input').val('');
-                    },
-                    complete: function() {
                         loaderToggle();
-                    }
+                    },
+                    error: function(xhr, thrownError) {
+                        let alertText = '報名失敗!請麻煩通知人員排除狀況\n';
+                        alertText += 'status: ' + xhr.status +'\n';
+                        alertText += 'errorText: ' + xhr.responseText +'\n';
+                        alert(alertText);
+                        $('body').css('overflow', 'visible');
+                        $('#ftco-loader').toggleClass('show');
+                    },
+                    // complete: function() {
+                    //     loaderToggle();
+                    // }
                 })
             }
         }
