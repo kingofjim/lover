@@ -9,3 +9,4 @@ __pycache__/
 *.pyc
 uwsgi_params
 uwsgi.ini
+*/migrations/
