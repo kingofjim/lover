@@ -386,11 +386,6 @@
   });
 
    
-   $('#checkin_date, #checkout_date, #birth_date, #arrival_date, #departure_date, #expiration_date').datepicker({
-	  'format': 'm/d/yyyy',
-	  'autoclose': true
-	});
-	$('#book_time, #arrival_time, #departure_time').timepicker();
 
 
 
