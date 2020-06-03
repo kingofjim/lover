@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Players(models.Model):
+    active = models.BooleanField(default=False)
     name = models.CharField(max_length=8)
     nickname = models.CharField(max_length=15, null=True, blank=True)
     phone = models.CharField(max_length=15)
@@ -13,6 +14,7 @@ class Players(models.Model):
     fb = models.CharField(max_length=100, null=True, blank=True)
     photo_whole = models.CharField(max_length=150, null=True)
     photo_half = models.CharField(max_length=150, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

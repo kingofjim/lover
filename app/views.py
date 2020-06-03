@@ -33,3 +33,7 @@ def apply(request):
         player.save()
 
         return HttpResponse('Ok')
+
+def vote(request):
+    players_data = Players.objects.filter(active=True).values('id', 'name', 'photo_half')
+    return render(request, 'vote.html', {'players': players_data})

@@ -20,6 +20,7 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('vote/', views.vote),
     path('', views.index),
     path('apply/', views.apply, name='apply'),
 ]

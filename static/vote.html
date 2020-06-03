@@ -1,0 +1,50 @@
+{% extends 'template.html' %}
+{% block html_title %}
+    <title>線上投票|尋找愛神代言人 - 士林夜市年度觀光大使</title>
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/vote.css">
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '627875171149975',
+                cookie: true,
+                xfbml: true,
+                version: 'v7.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% endblock %}
+
+{% block content %}
+    <section class="ftco-section contact-section ftco-degree-bg ftco-animate">
+        <div content="container">
+            <div class="row">
+                {% for player in players %}
+                    <div class="col-4 player">
+                        {#                        <img src="{{ player.photo_half }}">#}
+                        <button>投我一票</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js/vote.js"></script>
+{% endblock %}
