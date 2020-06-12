@@ -9,7 +9,7 @@ from .models import Players
 def index(request):
     return render(request, 'index.html', {})
 
-# @csrf_exempt
+@csrf_exempt
 def apply(request):
     if(request.method == 'GET'):
         return render(request, 'apply.html', {})
