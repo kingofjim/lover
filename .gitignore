@@ -10,3 +10,4 @@ __pycache__/
 uwsgi_params
 uwsgi.ini
 */migrations/
+log/

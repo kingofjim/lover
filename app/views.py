@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from app.func import save_player_image, get_file_type
 from .models import Players
 
 # Create your views here.
 
 def index(request):
-    print('haha')
     return render(request, 'index.html', {})
 
+# @csrf_exempt
 def apply(request):
     if(request.method == 'GET'):
         return render(request, 'apply.html', {})
