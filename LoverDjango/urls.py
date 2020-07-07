@@ -23,4 +23,5 @@ urlpatterns = [
     path('vote/', views.vote),
     path('', views.index),
     path('apply/', views.apply, name='apply'),
+    path('profile/<str:id>', views.profile, name='profile'),
 ]

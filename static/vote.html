@@ -1,20 +1,21 @@
 {% extends 'template.html' %}
 {% block html_title %}
-    <title>線上投票|尋找愛神代言人 - 士林夜市年度觀光大使</title>
+    <title>線上投票 - 尋找愛神代言人 | 士林夜市2020年度觀光大使</title>
 {% endblock %}
 {% block css %}
+    {#    <link rel="stylesheet" href="/static/css/icon.css">#}
     <link rel="stylesheet" href="/static/css/vote.css">
     <script>
         window.fbAsyncInit = function () {
             FB.init({
-                appId: '627875171149975',
+                appId: '695948947888640',
                 cookie: true,
                 xfbml: true,
                 version: 'v7.0'
             });
 
             FB.AppEvents.logPageView();
-
+            {#FB.logout()#}
         };
 
         (function (d, s, id) {
@@ -31,18 +32,92 @@
 {% endblock %}
 
 {% block content %}
-    <section class="ftco-section contact-section ftco-degree-bg ftco-animate">
-        <div content="container">
+    <section class="ftco-section contact-section ftco-degree-bg ftco-animate" id="players">
+        <div class="container">
+            <div class="header">
+                <h1 align="center">全民票選愛神代言人</h1>
+                <h5 align="center">活動辦法: 7/1 ~ 7/30 以Facebook帳號登入
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+                    ，每日有五票且不得重複投在同一人上，每日凌晨0點重置。
+                </h5>
+            </div>
             <div class="row">
+                {% csrf_token %}
                 {% for player in players %}
-                    <div class="col-4 player">
-                        {#                        <img src="{{ player.photo_half }}">#}
-                        <button>投我一票</button>
+                    <div class="col-lg-3 col-md-6 player">
+                        {% if forloop.counter == 1 %}
+                            <div class="photo-holder no1">
+                                <img src="{{ player.photo_half }}">
+                            </div>
+                        {% elif forloop.counter == 2 %}
+                            <div class="photo-holder no2">
+                                <img src="{{ player.photo_half }}">
+                            </div>
+                        {% elif forloop.counter == 3 %}
+                            <div class="photo-holder no3">
+                                <img src="{{ player.photo_half }}">
+                            </div>
+                        {% else %}
+                            <div class="photo-holder">
+                                <img src="{{ player.photo_half }}">
+                            </div>
+                        {% endif %}
+                        <div>
+                            <h6 align="center" class="name">{{ player.name }}</h6>
+                            <div class="social">
+                                {% if player.fb %}
+                                    <a href="{{ player.fb }}">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+                                {% endif %}
+                                {% if player.ig %}
+                                    <a href="{{ player.ig }}">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+                                {% endif %}
+                                <span class="circle profile" data-id="{{ player.id }}"></span>
+                            </div>
+                            <h5 align="center">{{ player.votes }} 票</h5>
+                            <button class="btn btn-primary btn-block vote-button" data-vote="{{ player.id }}">投我一票
+                            </button>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
+    <section id="profile">
+        <div><img class="close-button" src="/static/images/close.svg" onclick="closeProfile()"></div>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                {#                <iframe width="1792" height="849" src="https://www.youtube.com/embed/Xkn6UWXWCbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>#}
+                <iframe src="https://www.youtube.com/embed/Xkn6UWXWCbc?rel=0&amp;autoplay=1&mute=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="item"><img src="/static/upload/4/photo-half.jpeg"></div>
+            <div class="item"><img src="/static/upload/4/photo-whole.jpeg"></div>
+        </div>
+
+        <div class="intro jumbotron">
+            <div class="info-container">
+                <div class="info">
+                    <h3>林采緹<span class="social">
+                            <a href="#"><spanp class="circle no-circle fb"></spanp></a>
+                            <a href="#"><spanp class="circle no-circle youtube"></spanp></a>
+                            <a href="#"><spanp class="circle no-circle ig"></spanp></a>
+                        </span>
+                    </h3>
+                    <h6>1992/07/03</h6>
+                </div>
+            </div>
+            <p>大家好我是Jim</p>
+
+        </div>
+        <button class="btn btn-primary btn-block btn-light vote-button">投我一票</button>
+    </section>
+    <div class="bg-overlay"></div>
 {% endblock %}
 
 {% block js %}

@@ -16,7 +16,8 @@ main {
   form {
     .photo-box {
       width: 100%;
-      height: 500px;
+      height: 110vw;
+      max-height: 700px;
       border: 1px solid rgba(139, 139, 146, 0.6);
       background-size: contain;
       background-repeat: no-repeat;
@@ -54,8 +55,8 @@ main {
 .close {
   display: none;
   position: absolute;
-  right: 14px;
-  top: 18px;
+  right: 12px;
+  top: 10px;
   width: 32px;
   height: 32px;
   opacity: 0.5;

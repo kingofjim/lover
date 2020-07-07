@@ -1,9 +1,255 @@
-main{
+main {
   section {
-    .player {
-      img {
-        max-width: 400px;
+    &#players {
+      .container {
+
+        .row {
+          margin: 0;
+        }
+
+        .header {
+          margin-bottom: 50px;
+
+          h1 {
+            font-size: 2em;
+          }
+        }
+
+        .player {
+          margin-bottom: 40px;
+
+          .name {
+            color: #a96d1a;
+          }
+
+          .vote-button {
+            border-radius: 2px;
+          }
+
+          .photo-holder {
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+              //overflow: visible;
+              //z-index: 1;
+            }
+
+            &.no1:before {
+              content: "1";
+              width: 40px;
+              height: 40px;
+              background: rgba(76, 4, 33, 0.9);
+              position: absolute;
+              z-index: 2;
+              right: 0;
+              top: -17px;
+              border-radius: 25px;
+              font-size: 24px;
+              padding-left: 14px;
+              color: white;
+            }
+
+            &.no1:after {
+              content: "";
+              width: 35px;
+              height: 30px;
+              background: url(/static/images/crown-solid.svg);
+              background-repeat: no-repeat;
+              position: absolute;
+              top: -46px;
+              z-index: 3;
+              right: 3px;
+              display: block;
+            }
+
+            &.no2:before {
+              content: "2";
+              width: 40px;
+              height: 40px;
+              background: rgba(76, 4, 33, 0.9);
+              position: absolute;
+              z-index: 2;
+              right: 0;
+              top: -17px;
+              border-radius: 25px;
+              font-size: 24px;
+              padding-left: 14px;
+              color: white;
+            }
+
+            &.no3:before {
+              content: "3";
+              width: 40px;
+              height: 40px;
+              background: rgba(76, 4, 33, 0.9);
+              position: absolute;
+              z-index: 2;
+              right: 0;
+              top: -17px;
+              border-radius: 24px;
+              font-size: 25px;
+              padding-left: 14px;
+              color: white;
+            }
+
+            img {
+              height: 100%;
+              margin: auto;
+
+              &:hover {
+                animation-name: photoScale;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                //z-index: 1;
+              }
+
+            }
+
+            @media all and (max-width: 768px) {
+              height: 400px;
+            }
+          }
+        }
       }
     }
+
+    &#profile {
+      display: none;
+      background: #4c0722;
+      //height: 800px;
+      width: 100%;
+      max-width: 500px;
+      position: fixed;
+      top: 40px;
+      z-index: 1;
+      left: 50%;
+      margin-left: -250px;
+      @media all and (max-width: 500px) {
+        left: 0;
+        margin: 0;
+      }
+
+      .item img {
+        width: auto;
+        margin: 0 auto;
+        border-radius: 2%;
+        height: 100%;
+        max-height: 500px;
+      }
+
+      iframe {
+        width: 100%;
+        min-height: 300px;
+        margin-top: 45px;
+      }
+
+      .close-button {
+        width: 30px;
+        right: 10px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
+
+    .intro {
+      background: #4c0521;
+      color: white;
+
+      .info-container {
+        position: relative;
+
+        .info {
+          //position: absolute;
+          color: white;
+          text-shadow: 1px 1px 2px #000000;
+          //top: -150px;
+          //left: 15px;
+          //z-index: 1;
+
+          h3 {
+            display: flex;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #efefef;
+          }
+        }
+      }
+    }
+
+    .vote-button {
+      border-radius: 3px;
+    }
+  }
+
+  .bg-overlay {
+    width: 100%;
+    height: 100%;
+    background: #00000085;
+    position: fixed;
+    top: 0;
+    display: none;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+
+    .circle {
+      border-radius: 60%;
+      border: 1px solid black;
+      width: 30px;
+      height: 30px;
+      margin-right: 6px;
+      display: inline-block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &.no-circle {
+        border: none;
+        margin-top: 8px;
+      }
+
+      &.profile {
+        background-image: url("/static/images/user-solid.svg");
+        background-size: 11px;
+      }
+
+      &.fb {
+        background-image: url("/static/images/facebook-f-brands.svg");
+        background-size: 11px;
+      }
+
+      &.youtube {
+        background-image: url("/static/images/youtube-brands.svg");
+        background-size: 20px;
+      }
+
+      &.ig {
+        background-image: url("/static/images/instagram-brands.svg");
+        background-size: 20px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  margin: 0;
+}
+
+@keyframes photoScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }
