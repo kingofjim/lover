@@ -19,12 +19,13 @@ $(function () {
                         contentType: false,
                         data: formdata,
                         success: function (data) {
-                            alert("投票成功~");
                             if (data == "duplicated") {
                                 alert('不能重複投票在同一位參賽者上。')
                             } else {
                                 if (data['voted'] == 5) {
                                     alert('今日投票額度已用完。')
+                                } else {
+                                    alert("投票成功~");
                                 }
                             }
                         },
