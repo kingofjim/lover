@@ -115,9 +115,10 @@ main section#profile .item img {
   width: auto;
   margin: 0 auto;
   border-radius: 2%;
-  height: 100%;
+  height: auto;
   max-height: 500px;
   margin-top: 50px;
+  max-width: 100%;
 }
 main section#profile iframe {
   width: 100%;

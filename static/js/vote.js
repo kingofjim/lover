@@ -89,8 +89,8 @@ function showProfile(id) {
     }
 
     console.log(name, video, ig, fb, youtube, intro);
-
     var windowHeight = $(window).innerHeight() - 40;
+    $('#profile > div.owl-carousel.owl-theme.owl-loaded.owl-drag > div.owl-dots > button:nth-child(1)').click();
     $('#profile').show();
     $('.bg-overlay').show();
     $('body').css('overflow', 'hidden');

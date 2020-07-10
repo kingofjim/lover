@@ -26,7 +26,6 @@ main {
             border-radius: 2px;
           }
 
-          //.video {
           .video, .intro, .photo-half, .photo-whole {
             display: none;
           }
@@ -142,9 +141,10 @@ main {
         width: auto;
         margin: 0 auto;
         border-radius: 2%;
-        height: 100%;
+        height: auto;
         max-height: 500px;
         margin-top: 50px;
+        max-width: 100%;
       }
 
       iframe {
