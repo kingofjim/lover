@@ -97,7 +97,7 @@ main section#profile {
   display: none;
   background: #6b0f33;
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   position: fixed;
   top: 40px;
   z-index: 1;
@@ -124,6 +124,7 @@ main section#profile iframe {
   width: 100%;
   min-height: 300px;
   margin-top: 50px;
+  height: 30vw;
 }
 main section#profile .close-button {
   width: 30px;
