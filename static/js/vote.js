@@ -69,7 +69,6 @@ function showProfile(id) {
     var fb = $('.player[data-player='+id+'] .fb-link').attr('href');
     var youtube = $('.player[data-player='+id+'] .youtube-link').attr('href');
 
-    console.log(video);
     $('#profile .name').text(name);
     $('#profile .into-text').text(intro);
     $('#profile .photo-half').attr('src', photoHalf);
@@ -89,7 +88,6 @@ function showProfile(id) {
         $('#profile .youtube').css('display', 'inline-block');
     }
 
-    console.log(name, video, ig, fb, youtube, intro);
     var windowHeight = $(window).innerHeight() - 40;
     $('#profile > div.owl-carousel.owl-theme.owl-loaded.owl-drag > div.owl-dots > button:nth-child(1)').click();
     $('#profile').show();
