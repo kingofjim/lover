@@ -19,6 +19,7 @@ $(function () {
                         contentType: false,
                         data: formdata,
                         success: function (data) {
+                            alert("投票成功~");
                             if (data == "duplicated") {
                                 alert('不能重複投票在同一位參賽者上。')
                             } else {
