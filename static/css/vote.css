@@ -97,12 +97,12 @@ main section#profile {
   display: none;
   background: #6b0f33;
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   position: fixed;
   top: 40px;
   z-index: 1;
   left: 50%;
-  margin-left: -400px;
+  margin-left: -350px;
   margin-top: 35px;
 }
 @media all and (max-width: 500px) {
@@ -125,6 +125,7 @@ main section#profile iframe {
   min-height: 300px;
   margin-top: 50px;
   height: 30vw;
+  max-height: 400px;
 }
 main section#profile .close-button {
   width: 30px;
