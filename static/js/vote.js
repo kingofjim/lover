@@ -1,12 +1,11 @@
 $(function () {
-    $('main section .player button').click(function () {
+    $('main section .player button, #profile .vote-button').click(function () {
         FB.getLoginStatus((response) => {
             if (response.status == "connected") {
                 let userID = FB.getUserID();
                 let accessToken = FB.getAccessToken();
                 let vote = $(this).data('vote');
                 let csrf = $('input[name=csrfmiddlewaretoken]').val();
-                console.log(csrf);
                 // let vote = $(this
                 if (userID) {
                     let formdata = new FormData();
@@ -37,10 +36,6 @@ $(function () {
         });
     })
 
-    $('.profile').click(function () {
-        showProfile()
-    })
-
     $('.bg-overlay').click(closeProfile);
 
     $('.owl-carousel').owlCarousel({
@@ -62,7 +57,38 @@ $(function () {
     })
 });
 
-function showProfile() {
+function showProfile(id) {
+    var name = $('.player[data-player='+id+'] .name').text();
+    var video = $('.player[data-player='+id+'] .video').text();
+    var intro = $('.player[data-player='+id+'] .intro').text();
+    var photoHalf = $('.player[data-player='+id+'] .photo-half').text();
+    var photoWhole = $('.player[data-player='+id+'] .photo-whole').text();
+    var ig = $('.player[data-player='+id+'] .ig-link').attr('href');
+    var fb = $('.player[data-player='+id+'] .fb-link').attr('href');
+    var youtube = $('.player[data-player='+id+'] .youtube-link').attr('href');
+
+    console.log(video);
+    $('#profile .name').text(name);
+    $('#profile .into-text').text(intro);
+    $('#profile .photo-half').attr('src', photoHalf);
+    $('#profile .photo-whole').attr('src', photoWhole);
+    $('#profile iframe').attr('src', 'https://www.youtube.com/embed/'+video);
+    $('#profile .vote-button').attr('data-vote', id);
+    if(fb) {
+        $('#profile .fb').parent('a').attr('href', fb);
+        $('#profile .fb').css('display', 'inline-block');
+    }
+    if(ig) {
+        $('#profile .ig').parent('a').attr('href', ig);
+        $('#profile .ig').css('display', 'inline-block');
+    }
+    if(youtube) {
+        $('#profile .youtube').parent('a').attr('href', youtube);
+        $('#profile .youtube').css('display', 'inline-block');
+    }
+
+    console.log(name, video, ig, fb, youtube, intro);
+
     var windowHeight = $(window).innerHeight() - 40;
     $('#profile').show();
     $('.bg-overlay').show();
@@ -72,7 +98,9 @@ function showProfile() {
 }
 
 function closeProfile() {
+    $('#profile iframe').attr('src', '');
     $('#profile').hide();
     $('.bg-overlay').hide();
     $('body').css('overflow', 'auto');
+    $('#profile .no-circle').css('display', 'none');
 }

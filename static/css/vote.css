@@ -16,6 +16,9 @@ main section#players .container .player .name {
 main section#players .container .player .vote-button {
   border-radius: 2px;
 }
+main section#players .container .player .video, main section#players .container .player .intro, main section#players .container .player .photo-half, main section#players .container .player .photo-whole {
+  display: none;
+}
 main section#players .container .player .photo-holder {
   height: 300px;
   overflow: hidden;
@@ -92,7 +95,7 @@ main section#players .container .player .photo-holder img:hover {
 }
 main section#profile {
   display: none;
-  background: #4c0722;
+  background: #6b0f33;
   width: 100%;
   max-width: 500px;
   position: fixed;
@@ -100,6 +103,7 @@ main section#profile {
   z-index: 1;
   left: 50%;
   margin-left: -250px;
+  margin-top: 35px;
 }
 @media all and (max-width: 500px) {
   main section#profile {
@@ -113,6 +117,7 @@ main section#profile .item img {
   border-radius: 2%;
   height: 100%;
   max-height: 500px;
+  margin-top: 50px;
 }
 main section#profile iframe {
   width: 100%;
@@ -125,22 +130,21 @@ main section#profile .close-button {
   position: absolute;
   cursor: pointer;
   z-index: 2;
+  top: 6px;
 }
 main section .intro {
-  background: #4c0521;
-  color: white;
+  background: #ffffff;
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
 }
 main section .intro .info-container {
   position: relative;
 }
-main section .intro .info-container .info {
-  color: white;
-  text-shadow: 1px 1px 2px #000000;
-}
 main section .intro .info-container .info h3 {
   display: flex;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px #efefef;
 }
 main section .vote-button {
   border-radius: 3px;
@@ -169,8 +173,10 @@ main .social .circle {
   background-size: contain;
 }
 main .social .circle.no-circle {
+  display: inline-block;
   border: none;
   margin-top: 8px;
+  display: none;
 }
 main .social .circle.profile {
   background-image: url("/static/images/user-solid.svg");

@@ -17,6 +17,7 @@ class Players(models.Model):
     photo_half = models.CharField(max_length=150, null=True)
     votes = models.PositiveIntegerField(default=0)
     video = models.CharField(max_length=100, null=True, blank=True)
+    intro = models.CharField(max_length=255, null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
