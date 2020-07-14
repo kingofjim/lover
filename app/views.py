@@ -51,8 +51,9 @@ def vote(request):
         vote = request.POST['vote']
         access_toke = request.POST['access_token']
         now = datetime.now()
-        # print(now.strftime('%Y-%m-%d %H:%M:%S'))
+        print(now.strftime('%Y-%m-%d %H:%M:%S'))
         today = now.strftime('%Y-%m-%d')
+        # print(today)
         try:
             voter = Voter.objects.filter(date=today, user_id=user_id).get()
         except ObjectDoesNotExist:

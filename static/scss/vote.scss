@@ -150,9 +150,10 @@ main {
       iframe {
         width: 100%;
         min-height: 300px;
-        margin-top: 50px;
+        //margin-top: 50px;
         height: 30vw;
         max-height: 400px;
+        padding: 0 20px;
       }
 
       .close-button {
@@ -168,6 +169,7 @@ main {
     .intro {
       background: #ffffff;
       color: black;
+      margin-top: 12px;
       margin-left: 20px;
       margin-right: 20px;
       border-radius: 10px;
@@ -212,8 +214,8 @@ main {
     justify-content: center;
 
     .circle {
-      border-radius: 60%;
-      border: 1px solid black;
+      //border-radius: 60%;
+      //border: 1px solid black;
       width: 30px;
       height: 30px;
       margin-right: 6px;
@@ -231,22 +233,23 @@ main {
 
       &.profile {
         background-image: url("/static/images/user-solid.svg");
-        background-size: 11px;
+        background-size: 16px;
       }
 
       &.fb {
-        background-image: url("/static/images/facebook-f-brands.svg");
-        background-size: 11px;
+        background-image: url("/static/images/facebook.png");
+        //background-size: 11px;
+        background-size: auto;
       }
 
       &.youtube {
-        background-image: url("/static/images/youtube-brands.svg");
-        background-size: 20px;
+        background-image: url("/static/images/youtube.png");
+        background-size: auto;
       }
 
       &.ig {
-        background-image: url("/static/images/instagram-brands.svg");
-        background-size: 20px;
+        background-image: url("/static/images/instagram-sketched.png");
+        background-size: auto;
       }
 
       &:hover {

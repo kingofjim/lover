@@ -80,7 +80,8 @@
                                         <spanp class="circle youtube"></spanp>
                                     </a>
                                 {% endif %}
-                                <span class="circle profile" data-id="{{ player.id }}" onclick="showProfile({{ player.id }})"></span>
+                                <span class="circle profile" data-id="{{ player.id }}"
+                                      onclick="showProfile({{ player.id }})"></span>
                                 <span class="video">{{ player.video }}</span>
                                 <span class="intro">{{ player.intro }}</span>
                                 <span class="photo-half">{{ player.photo_half }}</span>
@@ -98,15 +99,15 @@
     <section id="profile">
         <div><img class="close-button" src="/static/images/close.svg" onclick="closeProfile()"></div>
         <div class="owl-carousel owl-theme">
-            <div class="item">
-                {#                <iframe width="1792" height="849" src="https://www.youtube.com/embed/Xkn6UWXWCbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>#}
-                <iframe src="https://www.youtube.com/embed/Xkn6UWXWCbc?rel=0&amp;autoplay=1&mute=1"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
             <div class="item"><img class="photo-half" src="/static/upload/4/photo-half.jpeg"></div>
             <div class="item"><img class="photo-whole" src="/static/upload/4/photo-whole.jpeg"></div>
+        </div>
+        <div class="video">
+            {#                <iframe width="1792" height="849" src="https://www.youtube.com/embed/Xkn6UWXWCbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>#}
+            <iframe src="https://www.youtube.com/embed/"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
         </div>
 
         <div class="intro jumbotron">
