@@ -46,15 +46,15 @@
                 {% for player in players %}
                     <div class="col-lg-3 col-md-6 player" data-player="{{ player.id }}">
                         {% if forloop.counter == 1 %}
-                            <div class="photo-holder no1">
+                            <div class="photo-holder no1 crown">
                                 <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
                             </div>
                         {% elif forloop.counter == 2 %}
-                            <div class="photo-holder no2">
+                            <div class="photo-holder no2 crown">
                                 <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
                             </div>
                         {% elif forloop.counter == 3 %}
-                            <div class="photo-holder no3">
+                            <div class="photo-holder no3 crown">
                                 <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
                             </div>
                         {% elif forloop.counter == 4 %}

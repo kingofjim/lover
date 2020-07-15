@@ -39,7 +39,7 @@ main section#players .container .player .photo-holder.no1:before {
   padding-left: 14px;
   color: white;
 }
-main section#players .container .player .photo-holder.no1:after {
+main section#players .container .player .photo-holder.crown:after {
   content: "";
   width: 35px;
   height: 30px;
