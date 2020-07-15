@@ -147,10 +147,16 @@ main {
         max-width: 100%;
       }
 
+      .item.video {
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+      }
+
       iframe {
         width: 100%;
         min-height: 300px;
-        //margin-top: 50px;
+        margin: auto;
         height: 30vw;
         max-height: 400px;
         padding: 0 20px;
