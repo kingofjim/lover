@@ -20,7 +20,7 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('vote/', views.vote),
+    path('vote/', views.vote, name='vote'),
     path('', views.index),
     path('apply/', views.apply, name='apply'),
     path('profile/<str:id>', views.profile, name='profile'),

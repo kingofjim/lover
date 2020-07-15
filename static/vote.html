@@ -57,6 +57,26 @@
                             <div class="photo-holder no3">
                                 <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
                             </div>
+                        {% elif forloop.counter == 4 %}
+                            <div class="photo-holder no4">
+                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                            </div>
+                        {% elif forloop.counter == 5 %}
+                            <div class="photo-holder no5">
+                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                            </div>
+                        {% elif forloop.counter == 6 %}
+                            <div class="photo-holder no6">
+                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                            </div>
+                        {% elif forloop.counter == 7 %}
+                            <div class="photo-holder no7">
+                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                            </div>
+                        {% elif forloop.counter == 8 %}
+                            <div class="photo-holder no8">
+                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                            </div>
                         {% else %}
                             <div class="photo-holder">
                                 <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
@@ -88,7 +108,8 @@
                                 <span class="photo-whole">{{ player.photo_whole }}</span>
                             </div>
                             <h5 align="center">{{ player.votes }} 票</h5>
-                            <button class="btn btn-primary btn-block" onclick="showProfile({{ player.id }})">立即投票</button>
+                            <button class="btn btn-primary btn-block" onclick="showProfile({{ player.id }})">立即投票
+                            </button>
                         </div>
                     </div>
                 {% endfor %}
@@ -99,11 +120,11 @@
         <div><img class="close-button" src="/static/images/close.svg" onclick="closeProfile()"></div>
         <div class="owl-carousel owl-theme">
             <div class="item video">
-{#                                <iframe width="1792" height="849" src="https://www.youtube.com/embed/Xkn6UWXWCbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>#}
-{#                <iframe src="https://www.youtube.com/embed/"#}
-{#                        frameborder="0"#}
-{#                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"#}
-{#                        allowfullscreen></iframe>#}
+                {#                                <iframe width="1792" height="849" src="https://www.youtube.com/embed/Xkn6UWXWCbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>#}
+                {#                <iframe src="https://www.youtube.com/embed/"#}
+                {#                        frameborder="0"#}
+                {#                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"#}
+                {#                        allowfullscreen></iframe>#}
             </div>
             <div class="item"><img class="photo-half" src="/static/upload/4/photo-half.jpeg"></div>
             <div class="item"><img class="photo-whole" src="/static/upload/4/photo-whole.jpeg"></div>
