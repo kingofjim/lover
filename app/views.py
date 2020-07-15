@@ -101,3 +101,6 @@ def _isUnique(voter, vote):
 
 def profile(request, id):
     return HttpResponse()
+
+def privacy(request):
+    return render(request, 'privacy.html', {})
