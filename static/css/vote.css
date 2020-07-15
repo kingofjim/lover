@@ -152,8 +152,6 @@ main section .intro .info-container .info h3 {
 }
 main section .vote-button {
   border-radius: 10px;
-  margin-right: 35px;
-  position: absolute;
   right: 0;
   width: 9em;
   max-width: 144px;
