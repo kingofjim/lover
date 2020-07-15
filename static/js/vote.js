@@ -1,16 +1,19 @@
+var vote;
 $(function () {
     $('#profile .vote-button').click(function () {
+        // vote = $(this).data('vote');
+        console.log(vote);
         FB.getLoginStatus((response) => {
             if (response.status == "connected") {
                 let userID = FB.getUserID();
                 let accessToken = FB.getAccessToken();
-                let vote = $(this).data('vote');
                 let csrf = $('input[name=csrfmiddlewaretoken]').val();
                 // let vote = $(this
                 if (userID) {
                     let formdata = new FormData();
                     formdata.append('user_id', userID);
                     formdata.append('vote', vote);
+                    console.log(vote);
                     formdata.append('access_token', accessToken);
                     formdata.append('csrfmiddlewaretoken', csrf);
                     $.ajax({
@@ -60,6 +63,9 @@ $(function () {
 });
 
 function showProfile(id) {
+    vote = id;
+    console.log(id);
+    $('#profile .vote-button').attr('data-vote', id);
     var name = $('.player[data-player='+id+'] .name').text();
     var video = $('.player[data-player='+id+'] .video').text();
     var intro = $('.player[data-player='+id+'] .intro').text();
@@ -77,8 +83,6 @@ function showProfile(id) {
     var iframeSrc = 'https://www.youtube.com/embed/'+video+'?rel=0&autoplay=1&mute=1"';
     var iframeElement = '<iframe src="'+iframeSrc+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     $('#profile .item').eq(0).append(iframeElement);
-
-    $('#profile .vote-button').attr('data-vote', id);
     if(fb) {
         $('#profile .fb').parent('a').attr('href', fb);
         $('#profile .fb').css('display', 'inline-block');
