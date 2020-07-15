@@ -1,5 +1,5 @@
 $(function () {
-    $('main section .player button, #profile .vote-button').click(function () {
+    $('#profile .vote-button').click(function () {
         FB.getLoginStatus((response) => {
             if (response.status == "connected") {
                 let userID = FB.getUserID();
@@ -73,7 +73,11 @@ function showProfile(id) {
     $('#profile .into-text').text(intro);
     $('#profile .photo-half').attr('src', photoHalf);
     $('#profile .photo-whole').attr('src', photoWhole);
-    $('#profile iframe').attr('src', 'https://www.youtube.com/embed/'+video);
+
+    var iframeSrc = 'https://www.youtube.com/embed/'+video+'?rel=0&autoplay=1&mute=1"';
+    var iframeElement = '<iframe src="'+iframeSrc+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    $('#profile .item').eq(0).append(iframeElement);
+
     $('#profile .vote-button').attr('data-vote', id);
     if(fb) {
         $('#profile .fb').parent('a').attr('href', fb);
@@ -98,7 +102,7 @@ function showProfile(id) {
 }
 
 function closeProfile() {
-    $('#profile iframe').attr('src', '');
+    $('#profile .item iframe').remove();
     $('#profile').hide();
     $('.bg-overlay').hide();
     $('body').css('overflow', 'auto');

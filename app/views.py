@@ -51,9 +51,12 @@ def vote(request):
         vote = request.POST['vote']
         access_toke = request.POST['access_token']
         now = datetime.now()
-        print(now.strftime('%Y-%m-%d %H:%M:%S'))
+        # print(now.strftime('%Y-%m-%d %H:%M:%S'))
         today = now.strftime('%Y-%m-%d')
+        end_time = datetime.strptime('2020-08-06 00:00:00', '%Y-%m-%d %H:%M:%S')
         # print(today)
+        if now > end_time:
+            return HttpResponse("The event is end.")
         try:
             voter = Voter.objects.filter(date=today, user_id=user_id).get()
         except ObjectDoesNotExist:

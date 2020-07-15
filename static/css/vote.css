@@ -151,7 +151,12 @@ main section .intro .info-container .info h3 {
   display: flex;
 }
 main section .vote-button {
-  border-radius: 3px;
+  border-radius: 10px;
+  margin-right: 35px;
+  position: absolute;
+  right: 0;
+  width: 9em;
+  max-width: 144px;
 }
 main .bg-overlay {
   width: 100%;
