@@ -3,7 +3,7 @@ $(function () {
     var now = new Date();
     // var now = new Date("2020-08-05T01:00:00");
     var eventEnd = new Date();
-    eventEnd.setUTCDate(4);
+    eventEnd.setUTCDate(5);
     eventEnd.setUTCHours(16);
     eventEnd.setUTCMinutes(0, 0);
 
