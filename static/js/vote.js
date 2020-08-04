@@ -1,44 +1,64 @@
 var vote;
 $(function () {
+    var now = new Date();
+    // var now = new Date("2020-08-05T01:00:00");
+    var eventEnd = new Date();
+    eventEnd.setUTCDate(4);
+    eventEnd.setUTCHours(16);
+    eventEnd.setUTCMinutes(0, 0);
+
+    if (now >= eventEnd) {
+        $('.vote-button').addClass('btn-disable');
+        $('.vote-button').removeClass('btn-primary');
+        $('.vote-button').removeClass('btn-light');
+        $('.vote-button').text('投票截止');
+    }
+
+
     $('#profile .vote-button').click(function () {
         // vote = $(this).data('vote');
-        console.log(vote);
-        FB.getLoginStatus((response) => {
-            if (response.status == "connected") {
-                let userID = FB.getUserID();
-                let accessToken = FB.getAccessToken();
-                let csrf = $('input[name=csrfmiddlewaretoken]').val();
-                // let vote = $(this
-                if (userID) {
-                    let formdata = new FormData();
-                    formdata.append('user_id', userID);
-                    formdata.append('vote', vote);
-                    console.log(vote);
-                    formdata.append('access_token', accessToken);
-                    formdata.append('csrfmiddlewaretoken', csrf);
-                    $.ajax({
-                        type: "POST",
-                        processData: false,
-                        contentType: false,
-                        data: formdata,
-                        success: function (data) {
-                            if (data == "duplicated") {
-                                alert('不能重複投票在同一位參賽者上。')
-                            } else {
-                                if (data['voted'] == 5) {
-                                    alert('今日投票額度已用完。')
+        var now = new Date();
+        // var now = new Date("2020-08-05T01:00:00");
+        if (now < eventEnd) {
+            FB.getLoginStatus((response) => {
+                if (response.status == "connected") {
+                    let userID = FB.getUserID();
+                    let accessToken = FB.getAccessToken();
+                    let csrf = $('input[name=csrfmiddlewaretoken]').val();
+                    // let vote = $(this
+                    if (userID) {
+                        let formdata = new FormData();
+                        formdata.append('user_id', userID);
+                        formdata.append('vote', vote);
+                        console.log(vote);
+                        formdata.append('access_token', accessToken);
+                        formdata.append('csrfmiddlewaretoken', csrf);
+                        $.ajax({
+                            type: "POST",
+                            processData: false,
+                            contentType: false,
+                            data: formdata,
+                            success: function (data) {
+                                if (data == "duplicated") {
+                                    alert('不能重複投票在同一位參賽者上。')
+                                } else if (data == "EventEnded") {
+                                    alert('活動已結束')
                                 } else {
-                                    alert("投票成功~");
+                                    if (data['voted'] == 5) {
+                                        alert('今日投票額度已用完。')
+                                    } else {
+                                        alert("投票成功~");
+                                    }
                                 }
-                            }
-                        },
-                    })
+                            },
+                        })
+                    }
+                } else {
+                    FB.login(function () {
+                    }, {scope: "public_profile,email"});
                 }
-            } else {
-                FB.login(function () {
-                }, {scope: "public_profile,email"});
-            }
-        });
+            });
+        }
     })
 
     $('.bg-overlay').click(closeProfile);

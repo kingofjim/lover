@@ -211,6 +211,9 @@ main section#profile .close-button {
   z-index: 2;
   top: 6px;
 }
+main section#profile .btn-disable {
+  cursor: auto;
+}
 main section .intro {
   background: #ffffff;
   color: black;
