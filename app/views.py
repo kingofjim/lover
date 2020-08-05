@@ -54,7 +54,7 @@ def vote(request):
         # print(now.strftime('%Y-%m-%d %H:%M:%S'))
         today = now.strftime('%Y-%m-%d')
         # now = datetime.strptime("2020-08-06 01:00:00", '%Y-%m-%d %H:%M:%S')
-        end_time = datetime.strptime('2020-08-05 16:00:00', '%Y-%m-%d %H:%M:%S')
+        end_time = datetime.strptime('2020-08-06 00:00:00', '%Y-%m-%d %H:%M:%S')
         print(now)
         if now > end_time:
             return HttpResponse("EventEnded")
