@@ -4,7 +4,7 @@
 {% endblock %}
 {% block css %}
     {#    <link rel="stylesheet" href="/static/css/icon.css">#}
-    <link rel="stylesheet" href="/static/css/vote.css">
+    <link rel="stylesheet" href="/static/css/vote.min.css">
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -46,43 +46,9 @@
                 {% csrf_token %}
                 {% for player in players %}
                     <div class="col-lg-3 col-md-6 player" data-player="{{ player.id }}">
-                        {% if forloop.counter == 1 %}
-                            <div class="photo-holder no1 crown">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 2 %}
-                            <div class="photo-holder no2 crown">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 3 %}
-                            <div class="photo-holder no3 crown">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 4 %}
-                            <div class="photo-holder no4">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 5 %}
-                            <div class="photo-holder no5">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 6 %}
-                            <div class="photo-holder no6">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 7 %}
-                            <div class="photo-holder no7">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% elif forloop.counter == 8 %}
-                            <div class="photo-holder no8">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% else %}
-                            <div class="photo-holder">
-                                <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
-                            </div>
-                        {% endif %}
+                        <div class="photo-holder no{{ forloop.counter }} crown">
+                            <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                        </div>
                         <div>
                             <h6 align="center" class="name">{{ player.nickname }}</h6>
                             <div class="social">
