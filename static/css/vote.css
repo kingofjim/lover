@@ -174,7 +174,7 @@ main section#players .container .player .photo-holder.no10:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no11:before {
@@ -188,7 +188,7 @@ main section#players .container .player .photo-holder.no11:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no12:before {
@@ -202,7 +202,7 @@ main section#players .container .player .photo-holder.no12:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no13:before {
@@ -216,11 +216,11 @@ main section#players .container .player .photo-holder.no13:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
-main section#players .container .player .photo-holder.no14:before {
-  content: "14";
+main section#players .container .player .photo-holder.no9:before {
+  content: "9";
   width: 40px;
   height: 40px;
   background: rgba(76, 4, 33, 0.9);
@@ -230,7 +230,7 @@ main section#players .container .player .photo-holder.no14:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no15:before {
@@ -244,7 +244,7 @@ main section#players .container .player .photo-holder.no15:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no16:before {
@@ -258,7 +258,7 @@ main section#players .container .player .photo-holder.no16:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no17:before {
@@ -272,7 +272,7 @@ main section#players .container .player .photo-holder.no17:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no18:before {
@@ -286,7 +286,7 @@ main section#players .container .player .photo-holder.no18:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no19:before {
@@ -300,7 +300,7 @@ main section#players .container .player .photo-holder.no19:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no20:before {
@@ -314,7 +314,7 @@ main section#players .container .player .photo-holder.no20:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder.no21:before {
@@ -328,7 +328,7 @@ main section#players .container .player .photo-holder.no21:before {
   top: -17px;
   border-radius: 24px;
   font-size: 25px;
-  padding-left: 14px;
+  padding-left: 9px;
   color: white;
 }
 main section#players .container .player .photo-holder img {
