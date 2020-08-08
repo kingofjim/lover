@@ -43,8 +43,8 @@ def apply(request):
 def vote(request):
     if (request.method == 'GET'):
 
-        players_data = Players.objects.filter(active=True).values('id', 'nickname', 'votes', 'fb', 'ig', 'intro',  'youtube', 'video', 'photo_half', 'photo_whole').order_by('-votes')
-        return render(request, 'vote.html', {'players': players_data})
+        # players_data = Players.objects.filter(active=True).values('id', 'nickname', 'votes', 'fb', 'ig', 'intro',  'youtube', 'video', 'photo_half', 'photo_whole').order_by('-votes')
+        return render(request, 'vote.html', {})
 
     elif (request.method == 'POST'):
         user_id = request.POST['user_id']

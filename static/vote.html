@@ -43,43 +43,672 @@
                 </h5>
             </div>
             <div class="row">
-                {% csrf_token %}
-                {% for player in players %}
-                    <div class="col-lg-3 col-md-6 player" data-player="{{ player.id }}">
-                        <div class="photo-holder no{{ forloop.counter }} crown">
-                            <img src="{{ player.photo_half }}" onclick="showProfile({{ player.id }})">
+                <input type="hidden" name="csrfmiddlewaretoken" value="A1ANB7fPWkqYujvKIJqqSFzpz8GxxbEeEvfy13YIPQfuRmflvc51kMahFqE7ItNf">
+
+                    <div class="col-lg-3 col-md-6 player" data-player="137">
+                        <div class="photo-holder no1 crown">
+                            <img src="/static/upload/137/photo-half-2.jpeg" onclick="showProfile(137)">
                         </div>
                         <div>
-                            <h6 align="center" class="name">{{ player.nickname }}</h6>
+                            <h6 align="center" class="name">楊飛飛</h6>
                             <div class="social">
-                                {% if player.fb %}
-                                    <a class="fb-link" href="{{ player.fb }}" target="_blank">
+
+                                    <a class="fb-link" href="https://www.facebook.com/feifei.lovelove" target="_blank">
                                         <spanp class="circle fb"></spanp>
                                     </a>
-                                {% endif %}
-                                {% if player.ig %}
-                                    <a class="ig-link" href="{{ player.ig }}" target="_blank">
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/fei_1223/?hl=zh-tw" target="_blank">
                                         <spanp class="circle ig"></spanp>
                                     </a>
-                                {% endif %}
-                                {% if player.youtube %}
-                                    <a class="youtube-link" href="{{ player.youtube }}" target="_blank">
-                                        <spanp class="circle youtube"></spanp>
-                                    </a>
-                                {% endif %}
-                                <span class="circle profile" data-id="{{ player.id }}"
-                                      onclick="showProfile({{ player.id }})"></span>
-                                <span class="video">{{ player.video }}</span>
-                                <span class="intro">{{ player.intro }}</span>
-                                <span class="photo-half">{{ player.photo_half }}</span>
-                                <span class="photo-whole">{{ player.photo_whole }}</span>
+
+
+                                <span class="circle profile" data-id="137" onclick="showProfile(137)"></span>
+                                <span class="video">nsqop3J_p7A</span>
+                                <span class="intro">大家好我是飛飛，喜歡環遊世界～也喜歡吃喝玩樂～ 更喜歡認識朋友們～</span>
+                                <span class="photo-half">/static/upload/137/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/137/photo-whole.jpeg</span>
                             </div>
-                            <h5 align="center">{{ player.votes }} 票</h5>
-                            <button class="btn btn-primary btn-block" onclick="showProfile({{ player.id }})">立即投票
+                            <h5 align="center">8743 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(137)">立即投票
                             </button>
                         </div>
                     </div>
-                {% endfor %}
+
+                    <div class="col-lg-3 col-md-6 player" data-player="138">
+                        <div class="photo-holder no2 crown">
+                            <img src="/static/upload/138/photo-half-2.jpeg" onclick="showProfile(138)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">鄭若青</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/aikyoz.67" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/aikyoz.67/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                    <a class="youtube-link" href="https://www.youtube.com/channel/UCq34CrYj97X7TRDsQLh9A-w" target="_blank">
+                                        <spanp class="circle youtube"></spanp>
+                                    </a>
+
+                                <span class="circle profile" data-id="138" onclick="showProfile(138)"></span>
+                                <span class="video">TcMDjgbonQM</span>
+                                <span class="intro">大家好，我是鄭若青，雖然看名字與外表很像文靜的草食性動物，但其實我的個性非常外向開朗，善於與人溝通。我來自好山好水的台東，年少有為的北漂阿美族，除了長得漂亮皮膚白腿又長之外似乎沒什麼缺點，之前住在士林，因為士林有太多美食導致我回台東的時候胖到媽媽差點認不出我。希望大家可以投給我一票，讓我帶領大家一起征服士林的美食吧！讓媽媽知道吃美食也可以出頭天啦！</span>
+                                <span class="photo-half">/static/upload/138/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/138/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">8016 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(138)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="71">
+                        <div class="photo-holder no3 crown">
+                            <img src="/static/upload/71/photo-half-3.jpeg" onclick="showProfile(71)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">小貓</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/Sweetycat0115/?tn-str=k*F" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/cat01.15/?hl=zh-tw" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="71" onclick="showProfile(71)"></span>
+                                <span class="video">mBUeCH1ob7g</span>
+                                <span class="intro">大家好，我是小貓～就是熱愛騎車、運動、美食跟旅遊的那個小貓。
+今年23歲，摩羯座B型，聽說是一個悶騷又三分鐘熱度的人，但我可是毅力很堅定的熱血騎士喔！🏍
+當然我也是一個貓奴啦～家裡有著三隻可愛的米克斯，所以我也是充滿愛的人喔🐱
+很高興這次受邀參與愛神代言人的活動，希望大家能每天把神聖的一票都投給我。</span>
+                                <span class="photo-half">/static/upload/71/photo-half-3.jpeg</span>
+                                <span class="photo-whole">/static/upload/71/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">5909 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(71)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="142">
+                        <div class="photo-holder no4 crown">
+                            <img src="/static/upload/142/photo-half-3.jpeg" onclick="showProfile(142)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">邱默默</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href=" https://zh-tw.facebook.com/Gilana19890127/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/tngnlo/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="142" onclick="showProfile(142)"></span>
+                                <span class="video">kVw_Js0HCUI</span>
+                                <span class="intro">大家好我是邱默默，ＪＫＦ百大女神第１５名，成人展第３名，我的專長是收納、整理家務、顧小孩，請大家投我一票</span>
+                                <span class="photo-half">/static/upload/142/photo-half-3.jpeg</span>
+                                <span class="photo-whole">/static/upload/142/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">5265 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(142)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="141">
+                        <div class="photo-holder no5 crown">
+                            <img src="/static/upload/141/photo-half-3.jpeg" onclick="showProfile(141)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">滷味妹Q小桃子</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/vivi02257/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://instagram.com/vivi02257?igshid=1m2pben4io90n" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="141" onclick="showProfile(141)"></span>
+                                <span class="video">SIkXdsUGxjE</span>
+                                <span class="intro">大家好 我是滷味妹 小桃子
+身高 158 體重 48
+三圍32E 24 35
+雙魚座
+平常喜歡旅遊 踏青 吃美食 看電影
+是個愛吃鬼 貪吃鬼 吃貨 哈哈😂
+很榮幸受邀士林夜市愛神票選活動
+希望藉由愛神的力量 讓很久沒遇到心儀對象的我 能趕快找到適合自己的心儀對象 😍
+請大家一定要投我ㄧ票呦😘</span>
+                                <span class="photo-half">/static/upload/141/photo-half-3.jpeg</span>
+                                <span class="photo-whole">/static/upload/141/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">3819 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(141)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="70">
+                        <div class="photo-holder no6 crown">
+                            <img src="/static/upload/70/photo-half-2.jpeg" onclick="showProfile(70)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">張安淇</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/angh0805/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://instagram.com/angel___chang?igshid=3ltbc185cfvq" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                    <a class="youtube-link" href="https://www.youtube.com/c/安捏柑厚" target="_blank">
+                                        <spanp class="circle youtube"></spanp>
+                                    </a>
+
+                                <span class="circle profile" data-id="70" onclick="showProfile(70)"></span>
+                                <span class="video">0urCXQVRoEE</span>
+                                <span class="intro">大家好，我是安淇❤️我是個活潑外向好動的女生，別看我外表柔柔的，我內心可住著小男孩呢！喜歡挑戰刺激不可能的任務☺️希望大家能投我一票</span>
+                                <span class="photo-half">/static/upload/70/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/70/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">3672 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(70)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="48">
+                        <div class="photo-holder no7 crown">
+                            <img src="/static/upload/48/photo-half-2.jpeg" onclick="showProfile(48)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">艾瑞絲</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://facebook.com/iris830322" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/iris_wpw26/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="48" onclick="showProfile(48)"></span>
+                                <span class="video">E-YcacujtPk</span>
+                                <span class="intro">我是Iris，畢業於義守大學國際觀光餐旅學系。
+牡羊座♈️O型
+Two things are worth to fight for: dreams and love.
+是個活潑外向的人。
+談過幾次戀愛，並從中學習到不一樣的經歷，進而讓自己更好去尋找那個跟我們契合的人。
+喜歡能夠跟我一起創造許多美好回憶又可以帶給我歡樂的男生😳
+好啦記得把票投給我哦😚
+愛你們❤️❤️</span>
+                                <span class="photo-half">/static/upload/48/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/48/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">3571 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(48)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="102">
+                        <div class="photo-holder no8 crown">
+                            <img src="/static/upload/102/photo-half-4.jpeg" onclick="showProfile(102)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">文檸Anna</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/profile.php?id=100002675056581" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/wenningli0903/?hl=zh-tw" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="102" onclick="showProfile(102)"></span>
+                                <span class="video">GmJlqhbdIqc</span>
+                                <span class="intro">大家好，我是文檸Anna❤️今年剛畢業於台北商業大學應用外語系。我的個性活潑外向，平時喜歡拍照分享自己的生活。這次參加了愛神代言人的活動，希望有機會能讓大家更認識我，所以請大家一定要投我一票喔，謝謝你們❤️</span>
+                                <span class="photo-half">/static/upload/102/photo-half-4.jpeg</span>
+                                <span class="photo-whole">/static/upload/102/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">2188 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(102)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="10">
+                        <div class="photo-holder no9 crown">
+                            <img src="/static/upload/10/photo-half-2.jpeg" onclick="showProfile(10)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">小渝兒</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://facebook.com/chloeyu0808/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/chloeyu0808/?hl=zh-tw" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="10" onclick="showProfile(10)"></span>
+                                <span class="video">dW0Vk14ZoWo</span>
+                                <span class="intro">Halo我是小渝兒 最喜歡的事就是帶給你們滿滿的快樂 希望你們見到我 都能有戀愛的感覺💚 大家別忘了投小渝兒一票 用甜美笑容迷死你😘😘😘</span>
+                                <span class="photo-half">/static/upload/10/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/10/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">2055 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(10)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="3">
+                        <div class="photo-holder no10 crown">
+                            <img src="/static/upload/3/photo-half-2.jpeg" onclick="showProfile(3)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">Mina米娜</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/1014mina/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/minafans1014/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                    <a class="youtube-link" href="https://www.youtube.com/channel/UCmPpo9OmRIoT_TWaRkNYbAA" target="_blank">
+                                        <spanp class="circle youtube"></spanp>
+                                    </a>
+
+                                <span class="circle profile" data-id="3" onclick="showProfile(3)"></span>
+                                <span class="video">NifTMIR1XLM</span>
+                                <span class="intro">哈囉 大家好😊
+我是愛笑的女孩Mina米娜
+甜美的外表 能歌善舞 笑臉迎人
+興趣是唱歌、跳舞、表演、拍戲、走秀以及平面拍攝
+參與過許多戲劇 節目演出以及廣告拍攝
+樂於嘗試多方位的演藝發展
+也希望能在這次選拔中脫穎而出
+請大家投給我神聖的一票呦~
+近期拍攝個人全新詞曲創作MV-Honey
+也請大家到時候多多點閱指教😊</span>
+                                <span class="photo-half">/static/upload/3/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/3/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">2036 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(3)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="135">
+                        <div class="photo-holder no11 crown">
+                            <img src="/static/upload/135/photo-half-2.jpeg" onclick="showProfile(135)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">又又</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/bonbon06182" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/yuwenhuang0618" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="135" onclick="showProfile(135)"></span>
+                                <span class="video">RU39P9WOZdU</span>
+                                <span class="intro">哈囉大家好，我是又能可愛又能性感的百變小隻馬-又又！
+我畢業於台灣師範大學研究所，目前是直播主、平面模特兒、kol、活動SG主持人等。
+期待成為愛神代言人，傳遞愛的能量給所有渴望幸福的人。</span>
+                                <span class="photo-half">/static/upload/135/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/135/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">1662 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(135)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="100">
+                        <div class="photo-holder no12 crown">
+                            <img src="/static/upload/100/photo-half-3.jpeg" onclick="showProfile(100)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">寶寶</h6>
+                            <div class="social">
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/owo_xwx_/?hl=zh-tw" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="100" onclick="showProfile(100)"></span>
+                                <span class="video">_KfZwU5keKM</span>
+                                <span class="intro">喜歡運動 潛水 慢跑 跆拳道 都是我喜歡的休閒活動。喜歡認識新朋友
+請大家踴躍投票 幫寶寶增加人氣</span>
+                                <span class="photo-half">/static/upload/100/photo-half-3.jpeg</span>
+                                <span class="photo-whole">/static/upload/100/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">1631 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(100)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="145">
+                        <div class="photo-holder no13 crown">
+                            <img src="/static/upload/145/photo-half-3.jpeg" onclick="showProfile(145)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">陳白白</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/white0407/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/white0407/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="145" onclick="showProfile(145)"></span>
+                                <span class="video">LnVa53ltPv8</span>
+                                <span class="intro">哈囉！大家好我是陳白白，專長是彩妝，興趣是吃美食，很高興這次能夠參與愛神代言人的活動，那阿白平常就是一個很愛吃美食的人，希望藉由這次愛神代言人比賽能夠讓大家知道士林夜市除了美食外更有愛神在這裡守護大家，最後也希望大家能多多支持我，我是陳白白，謝謝大家。</span>
+                                <span class="photo-half">/static/upload/145/photo-half-3.jpeg</span>
+                                <span class="photo-whole">/static/upload/145/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">1534 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(145)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="2">
+                        <div class="photo-holder no14 crown">
+                            <img src="/static/upload/2/photo-half-2.jpeg" onclick="showProfile(2)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">Ellen</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/jielun0717/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/jielun_0717/?hl=zh-tw" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="2" onclick="showProfile(2)"></span>
+                                <span class="video">opUbqxgxt78</span>
+                                <span class="intro">大家好我是Ellen，我來自基隆，今年18歲，畢業於台北育達高職，未來將就讀萬能科技大學觀光事業管理系，此次參加士林夜市愛神代言人活動，是為了能將所學活用於生活當中，請大家投我一票，謝謝大家！</span>
+                                <span class="photo-half">/static/upload/2/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/2/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">1381 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(2)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="129">
+                        <div class="photo-holder no15 crown">
+                            <img src="/static/upload/129/photo-half-2.jpeg" onclick="showProfile(129)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">海莉</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/halleygee821031" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://instagram.com/halleyaaa?igshid=1a0frjhbs4jaf" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="129" onclick="showProfile(129)"></span>
+                                <span class="video">wuccr4edBFA</span>
+                                <span class="intro">哈囉大家好我是吉虹蓉，也可以叫我Halley，我今年25歲，身高165公分，體重45公斤，畢業於世新大學廣播電視電影學系。我的個性活潑外向好相處，最大的興趣就是看電影、旅遊，經營美食部落格，對於美妝服飾也是小有研究，裝扮自己也是興趣之一。</span>
+                                <span class="photo-half">/static/upload/129/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/129/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">1069 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(129)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="122">
+                        <div class="photo-holder no16 crown">
+                            <img src="/static/upload/122/photo-half-2.jpeg" onclick="showProfile(122)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">Selina</h6>
+                            <div class="social">
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/yuan_0305" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="122" onclick="showProfile(122)"></span>
+                                <span class="video">Lls45fwDA9M</span>
+                                <span class="intro">嗨～大家好！我是Selina，今年22歲，剛畢業於台北醫學大學，我喜歡聽音樂、聊天、散步、運動還有吃美食(o^^o) 真的很開心可以藉由愛神代言人的活動認識大家，大家要把票投給我唷❤️(*ˉ︶ˉ*)</span>
+                                <span class="photo-half">/static/upload/122/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/122/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">822 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(122)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="11">
+                        <div class="photo-holder no17 crown">
+                            <img src="/static/upload/11/photo-half-2.jpeg" onclick="showProfile(11)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">小綿羊</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/littlesheep1006/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/yuna__tt/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="11" onclick="showProfile(11)"></span>
+                                <span class="video">sChS265Q7k0</span>
+                                <span class="intro">大家好，我是小綿羊，今年24歲，來自台中。畢業於台北城市科技大學演藝事業系，現在是一名舞者、歌手。專長是唱歌、跳舞、彈鋼琴，興趣是追劇、吃美食。</span>
+                                <span class="photo-half">/static/upload/11/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/11/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">726 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(11)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="76">
+                        <div class="photo-holder no18 crown">
+                            <img src="/static/upload/76/photo-half.jpeg" onclick="showProfile(76)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">蓁蓁</h6>
+                            <div class="social">
+
+
+                                    <a class="ig-link" href="https://instagram.com/uzx.io?igshid=11bgfeygkgqbs" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="76" onclick="showProfile(76)"></span>
+                                <span class="video">Sgb31uPzCok</span>
+                                <span class="intro">哈囉大家好～我叫邱蕷蓁 你們也可以叫我蓁蓁 今年18歲 很開心可以在這裡認識到大家 我的個性很活潑開朗 很喜歡和大家做朋友 也很愛搞怪 常常逗身邊的人哈哈大笑</span>
+                                <span class="photo-half">/static/upload/76/photo-half.jpeg</span>
+                                <span class="photo-whole">/static/upload/76/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">706 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(76)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="143">
+                        <div class="photo-holder no19 crown">
+                            <img src="/static/upload/143/photo-half-2.jpeg" onclick="showProfile(143)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">Shan汪選璇</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/shan940616" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="http://www.instagram.com/shan_940616/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="143" onclick="showProfile(143)"></span>
+                                <span class="video">rgozS1CuofU</span>
+                                <span class="intro">哈囉大家好，我是汪選璇，我最喜歡看書跟打電動還有彈鋼琴，是動靜皆宜的雙子寶寶，夢想是開一間流浪動物中途的咖啡廳，歡迎大家來追蹤我也希望可以把神聖的一票投給我唷</span>
+                                <span class="photo-half">/static/upload/143/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/143/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">607 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(143)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="49">
+                        <div class="photo-holder no20 crown">
+                            <img src="/static/upload/49/photo-half-2.jpeg" onclick="showProfile(49)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">岱岱</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/hostflora" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/hiiamfloraaa" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                <span class="circle profile" data-id="49" onclick="showProfile(49)"></span>
+                                <span class="video">I7hNA-f8uew</span>
+                                <span class="intro">大家好，我是岱岱，是一枚貓奴，同時也是專業主持人以及平面模特，最近在往成為空中瑜伽老師的路上邁進，希望可以把生活活得漂亮！我們一起努力吧！</span>
+                                <span class="photo-half">/static/upload/49/photo-half-2.jpeg</span>
+                                <span class="photo-whole">/static/upload/49/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">566 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(49)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 player" data-player="152">
+                        <div class="photo-holder no21 crown">
+                            <img src="/static/upload/152/photo-half-3.jpeg" onclick="showProfile(152)">
+                        </div>
+                        <div>
+                            <h6 align="center" class="name">詩妍stella</h6>
+                            <div class="social">
+
+                                    <a class="fb-link" href="https://www.facebook.com/331Stella/" target="_blank">
+                                        <spanp class="circle fb"></spanp>
+                                    </a>
+
+
+                                    <a class="ig-link" href="https://www.instagram.com/331stella/" target="_blank">
+                                        <spanp class="circle ig"></spanp>
+                                    </a>
+
+
+                                    <a class="youtube-link" href="https://www.youtube.com/channel/UC3Kc-bPwjZWX9XLkOqgE9dw" target="_blank">
+                                        <spanp class="circle youtube"></spanp>
+                                    </a>
+
+                                <span class="circle profile" data-id="152" onclick="showProfile(152)"></span>
+                                <span class="video">jLuEDG3OTRI</span>
+                                <span class="intro">我是名部落客也是名珠寶設計師，我喜歡美的事物，熱愛旅遊及美食，我有自己的youtube 頻道，裡面分享我多采多姿的有趣生活，我的座右銘是：生命就該花費在美好的事物上，活著就是要證明自己的價值！</span>
+                                <span class="photo-half">/static/upload/152/photo-half-3.jpeg</span>
+                                <span class="photo-whole">/static/upload/152/photo-whole.jpeg</span>
+                            </div>
+                            <h5 align="center">566 票</h5>
+                            <button class="btn btn-primary btn-block" onclick="showProfile(152)">立即投票
+                            </button>
+                        </div>
+                    </div>
+
             </div>
         </div>
     </section>
